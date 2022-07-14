@@ -1,3 +1,3 @@
-html {
-    background-color: red;
-}
+@import './scss/base/_normalize.scss';
+@import './scss/utils/_variables.scss';
+@import './scss/sections/main/_header.scss';
