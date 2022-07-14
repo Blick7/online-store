@@ -1,15 +1,16 @@
 .header {
     background-color: blue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 6rem;
 }
 
 .header__container {
     max-width: 75rem;
     margin: 0 auto;
     padding: 0 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
 }
 
 .shop-name__logo {
