@@ -1,0 +1,14 @@
+.filter-group__button {
+    margin: 0.2rem;
+    padding: 0.4rem;
+    background-color: $cobalt;
+    color: $white;
+    border-radius: 1rem;
+}
+
+.filter-group__button:hover {
+    background-color: $primary-yellow;
+    color: #000;
+    transition: 0.5s;
+    cursor: pointer;
+}

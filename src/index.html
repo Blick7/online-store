@@ -20,6 +20,92 @@
       </div>
     </div>
   </header>
+  <main class="main">
+    <div class="container">
+
+      <div class="filter-group">
+        <div class="filter-group__search">
+          <input type="text" placeholder="Search" class="filter-group__search-input">
+        </div>
+
+        <div class="filter-group-item filter-group__sort-by">
+          <h3 class="filter-group__title">Sort by:</h3>
+          <select id="select" class="sort-by__select">
+            <option value="price-lowest">Price(Lowest)</option>
+            <option value="price-highest">Price(Highest)</option>
+            <option value="">Name(A-Z)</option>
+            <option value="">Name(Z-A)</option>
+          </select>
+        </div>
+
+        <div class="filter-group-item filter-group__manufacturer">
+          <h3 class="filter-group__title">Manufacturer:</h3>
+          <ul class="filter-group__brands">
+            <li class="brand filter-group__button">ARRMA RC</li>
+            <li class="brand filter-group__button">Axial RC</li>
+            <li class="brand filter-group__button">Blade</li>
+            <li class="brand filter-group__button">E-flite</li>
+            <li class="brand filter-group__button">HobbyZone</li>
+          </ul>
+        </div>
+
+        <div class="filter-group-item filter-group__in-stock">
+          <h3 class="filter-group__title">In Stock:</h3>
+          <div class="in-stock__inputs">
+            <div id="sliderInStock" class="in-stock__input range-slider"></div>
+            <div class="in-stock__quantity range-slider-quantity">
+              <div class="in-stock__quantity-left">1</div>
+              <div class="in-stock__quantity-right">2</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group-item filter-group__price">
+          <h3 class="filter-group__title">Price:</h3>
+          <div class="price__inputs">
+            <div id="sliderPrice" class="price__input  range-slider"></div>
+            <div class="price__quantity range-slider-quantity">
+              <div class="price__quantity-left">1</div>
+              <div class="price__quantity-right">2</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group-item filter-group__colors">
+          <h3 class="filter-group__title">Colors:</h3>
+          <ul class="colors__items">
+            <li class="color__item" id="red"></li>
+            <li class="color__item" id="yellow"></li>
+            <li class="color__item" id="blue"></li>
+            <li class="color__item" id="green"></li>
+            <li class="color__item" id="black"></li>
+
+          </ul>
+        </div>
+
+        <div class="filter-group-item filter-group__control-type">
+          <h3 class="filter-group__title">Type:</h3>
+          <ul class="control-type__items">
+            <li class="control-type__item filter-group__button">Air</li>
+            <li class="control-type__item filter-group__button">Ground</li>
+          </ul>
+        </div>
+
+        <div class="filter-group-item filter-group__person-level">
+          <h3 class="filter-group__title">Level:</h3>
+          <ul class="person-level__items">
+            <li class="person-level__item filter-group__button">Beginner</li>
+            <li class="person-level__item filter-group__button">Experienced</li>
+            <li class="person-level__item filter-group__button">Professional</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="reset-button filter-group__button">Reset All Filters</span>
+        </div>
+
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>

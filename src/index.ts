@@ -1,3 +1,5 @@
 import './styles.scss';
 
-console.log('HELLO WORLD');
+import createRangeSlider from './application/components/rangeSlider';
+
+createRangeSlider();

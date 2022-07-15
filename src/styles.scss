@@ -1,3 +1,9 @@
 @import './scss/base/_normalize.scss';
 @import './scss/utils/_variables.scss';
-@import './scss/sections/main/_header.scss';
+@import './scss/base/_globals.scss';
+@import './scss/components/_range-input.scss';
+@import './scss/components/_buttons.scss';
+
+// PAGE PARTS
+@import './scss/sections/main-page/_header.scss';
+@import './scss/sections/main-page/_main.scss';
