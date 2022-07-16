@@ -26,8 +26,10 @@ figure {
 }
 
 .container {
-    max-width: 97rem;
+    max-width: 110rem;
     margin: 0 auto;
     padding: 0rem 1.5rem;
     padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
 }
