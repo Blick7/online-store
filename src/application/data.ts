@@ -282,7 +282,7 @@ export const data = [
         manufacturer: 'E-flite',
         inStock: 5,
         price: 219.99,
-        colors: ['red'],
+        colors: ['red', 'blue'],
         type: 'Air',
         level: 'beginner',
         img: './assets/jpg/EFL36750_A00_JCGR9MJH.jpg',
