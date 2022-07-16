@@ -9,7 +9,7 @@ export const data = [
         colors: ['blue', 'red', 'black'],
         type: 'Ground',
         level: 'beginner',
-        img: '../assets/jpg/ARA102727_A0_8K0Y8R2G.jpg',
+        img: './assets/jpg/ARA102727_A0_8K0Y8R2G.jpg',
     },
     {
         num: 2,
@@ -21,7 +21,7 @@ export const data = [
         colors: ['green', 'red'],
         type: 'Ground',
         level: 'beginner',
-        img: '../assets/jpg/ARA4302V3_A0_MEU77BNV.jpg',
+        img: './assets/jpg/ARA4302V3_A0_MEU77BNV.jpg',
     },
     {
         num: 3,
@@ -33,7 +33,7 @@ export const data = [
         colors: ['blue', 'red'],
         type: 'Ground',
         level: 'experienced',
-        img: '../assets/jpg/ARA8608V5_A00_J6P80WZ6.jpg',
+        img: './assets/jpg/ARA8608V5_A00_J6P80WZ6.jpg',
     },
     {
         num: 4,
@@ -45,7 +45,7 @@ export const data = [
         colors: ['green'],
         type: 'Ground',
         level: 'professional',
-        img: '../assets/jpg/ARA110002_A0_D9NLOKNG.jpg',
+        img: './assets/jpg/ARA110002_A0_D9NLOKNG.jpg',
     },
     {
         num: 5,
@@ -57,7 +57,7 @@ export const data = [
         colors: ['green', 'blue'],
         type: 'Ground',
         level: 'experienced',
-        img: '../assets/jpg/ARA4408V2_A31_1J2TZNUE.jpg',
+        img: './assets/jpg/ARA4408V2_A31_1J2TZNUE.jpg',
     },
     {
         num: 6,
@@ -69,7 +69,7 @@ export const data = [
         colors: ['blue'],
         type: 'Ground',
         level: 'experienced',
-        img: '../assets/jpg/ARA4410V2_A1_6ZKRDYXU.jpg',
+        img: './assets/jpg/ARA4410V2_A1_6ZKRDYXU.jpg',
     },
     {
         num: 7,
@@ -81,7 +81,7 @@ export const data = [
         colors: ['blue', 'green'],
         type: 'Ground',
         level: 'experienced',
-        img: '../assets/jpg/ARA4319V3_A39_AV7FKOSS.jpg',
+        img: './assets/jpg/ARA4319V3_A39_AV7FKOSS.jpg',
     },
     {
         num: 8,
@@ -93,7 +93,7 @@ export const data = [
         colors: ['black'],
         type: 'Ground',
         level: 'professional',
-        img: '../assets/jpg/ARA7617V2_A00_HXFUGCYH.jpg',
+        img: './assets/jpg/ARA7617V2_A00_HXFUGCYH.jpg',
     },
     {
         num: 9,
@@ -105,7 +105,7 @@ export const data = [
         colors: ['blue', 'red'],
         type: 'Ground',
         level: 'beginner',
-        img: '../assets/jpg/ARA4215V3_A45_L7V85QKR.jpg',
+        img: './assets/jpg/ARA4215V3_A45_L7V85QKR.jpg',
     },
     {
         num: 10,
@@ -117,7 +117,7 @@ export const data = [
         colors: ['blue'],
         type: 'Ground',
         level: 'experienced',
-        img: '../assets/jpg/ARA7615V2_A00_VVLGIV0P.jpg',
+        img: './assets/jpg/ARA7615V2_A00_VVLGIV0P.jpg',
     },
     {
         num: 11,
@@ -129,7 +129,7 @@ export const data = [
         colors: ['green'],
         type: 'Ground',
         level: 'experienced',
-        img: '../assets/jpg/AXI05000_A7_8QW1G766.jpg',
+        img: './assets/jpg/AXI05000_A7_8QW1G766.jpg',
     },
     {
         num: 12,
@@ -141,7 +141,7 @@ export const data = [
         colors: ['green', 'blue'],
         type: 'Ground',
         level: 'beginner',
-        img: '../assets/jpg/AXI03027_A2_68L2IVW8.jpg',
+        img: './assets/jpg/AXI03027_A2_68L2IVW8.jpg',
     },
     {
         num: 13,
@@ -153,7 +153,7 @@ export const data = [
         colors: ['black'],
         type: 'Ground',
         level: 'beginner',
-        img: '../assets/jpg/AXI03006B_A0_E28KMLTG.jpg',
+        img: './assets/jpg/AXI03006B_A0_E28KMLTG.jpg',
     },
     {
         num: 14,
@@ -165,7 +165,7 @@ export const data = [
         colors: ['black', 'red'],
         type: 'Ground',
         level: 'beginner',
-        img: '../assets/jpg/AXI03022_A01_WJPHKM20.jpg',
+        img: './assets/jpg/AXI03022_A01_WJPHKM20.jpg',
     },
     {
         num: 15,
@@ -177,7 +177,7 @@ export const data = [
         colors: ['blue'],
         type: 'Ground',
         level: 'beginner',
-        img: '../assets/jpg/AXI03009_A10_L963KB47.jpg',
+        img: './assets/jpg/AXI03009_A10_L963KB47.jpg',
     },
     {
         num: 16,
@@ -189,7 +189,7 @@ export const data = [
         colors: ['black'],
         type: 'Ground',
         level: 'beginner',
-        img: '../assets/jpg/AXI90069_A0_5GHRCI1S.jpg',
+        img: './assets/jpg/AXI90069_A0_5GHRCI1S.jpg',
     },
     {
         num: 17,
@@ -201,7 +201,7 @@ export const data = [
         colors: ['blue'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/BLH01300_A00_G5TBTR1R.jpg',
+        img: './assets/jpg/BLH01300_A00_G5TBTR1R.jpg',
     },
     {
         num: 18,
@@ -213,7 +213,7 @@ export const data = [
         colors: ['green'],
         type: 'Air',
         level: 'experienced',
-        img: '../assets/jpg/BLH4925SC2_A0_0JM6MAA6.jpg',
+        img: './assets/jpg/BLH4925SC2_A0_0JM6MAA6.jpg',
     },
     {
         num: 19,
@@ -225,7 +225,7 @@ export const data = [
         colors: ['green', 'red'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/BLH7050_A0_EJQ7MGOV.jpg',
+        img: './assets/jpg/BLH7050_A0_EJQ7MGOV.jpg',
     },
     {
         num: 20,
@@ -237,7 +237,7 @@ export const data = [
         colors: ['green', 'black'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/BLH05850_A0_SZZOO2NL.jpg',
+        img: './assets/jpg/BLH05850_A0_SZZOO2NL.jpg',
     },
     {
         num: 21,
@@ -249,7 +249,7 @@ export const data = [
         colors: ['green', 'black'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/BLH05850_A0_SZZOO2NL.jpg',
+        img: './assets/jpg/BLH05850_A0_SZZOO2NL.jpg',
     },
     {
         num: 22,
@@ -261,7 +261,7 @@ export const data = [
         colors: ['green'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/EFL38500_A00_82G9GEE2.jpg',
+        img: './assets/jpg/EFL38500_A00_82G9GEE2.jpg',
     },
     {
         num: 23,
@@ -273,7 +273,7 @@ export const data = [
         colors: ['red'],
         type: 'Air',
         level: 'experienced',
-        img: '../assets/jpg/EFL12575_A00_SFF5Y9J2.jpg',
+        img: './assets/jpg/EFL12575_A00_SFF5Y9J2.jpg',
     },
     {
         num: 24,
@@ -285,7 +285,7 @@ export const data = [
         colors: ['red'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/EFL36750_A00_JCGR9MJH.jpg',
+        img: './assets/jpg/EFL36750_A00_JCGR9MJH.jpg',
     },
     {
         num: 25,
@@ -297,7 +297,7 @@ export const data = [
         colors: ['blue'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/EFL97500_A00_AZXQEKRY.jpg',
+        img: './assets/jpg/EFL97500_A00_AZXQEKRY.jpg',
     },
     {
         num: 26,
@@ -309,7 +309,7 @@ export const data = [
         colors: ['yellow'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/EFL0975_A97_PKJ9S41C.jpg',
+        img: './assets/jpg/EFL0975_A97_PKJ9S41C.jpg',
     },
     {
         num: 27,
@@ -321,7 +321,7 @@ export const data = [
         colors: ['blue'],
         type: 'Air',
         level: 'experienced',
-        img: '../assets/jpg/EFL12350_A00_2T2569MU.jpg',
+        img: './assets/jpg/EFL12350_A00_2T2569MU.jpg',
     },
     {
         num: 28,
@@ -333,7 +333,7 @@ export const data = [
         colors: ['blue'],
         type: 'Air',
         level: 'professional',
-        img: '../assets/jpg/EFL12775_A00_UNYYFSW4.jpg',
+        img: './assets/jpg/EFL12775_A00_UNYYFSW4.jpg',
     },
     {
         num: 29,
@@ -345,7 +345,7 @@ export const data = [
         colors: ['red'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/HBZ5700_A00_00OUH6FL.jpg',
+        img: './assets/jpg/HBZ5700_A00_00OUH6FL.jpg',
     },
     {
         num: 30,
@@ -357,7 +357,7 @@ export const data = [
         colors: ['blue'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/HBZ44500_A0_JQ6HNKKL.jpg',
+        img: './assets/jpg/HBZ44500_A0_JQ6HNKKL.jpg',
     },
     {
         num: 31,
@@ -369,7 +369,7 @@ export const data = [
         colors: ['yellow', 'blue'],
         type: 'Air',
         level: 'experienced',
-        img: '../assets/jpg/HBZ32000LE_A20_LLX6GX2K.jpg',
+        img: './assets/jpg/HBZ32000LE_A20_LLX6GX2K.jpg',
     },
     {
         num: 32,
@@ -381,7 +381,7 @@ export const data = [
         colors: ['red', 'blue'],
         type: 'Air',
         level: 'experienced',
-        img: '../assets/jpg/HBZ31000_A08_1D2F1L9R.jpg',
+        img: './assets/jpg/HBZ31000_A08_1D2F1L9R.jpg',
     },
     {
         num: 33,
@@ -393,7 +393,7 @@ export const data = [
         colors: ['red', 'black', 'green'],
         type: 'Air',
         level: 'experienced',
-        img: '../assets/jpg/HBZ38000_A00_TQNMKRZV.jpg',
+        img: './assets/jpg/HBZ38000_A00_TQNMKRZV.jpg',
     },
     {
         num: 34,
@@ -405,7 +405,7 @@ export const data = [
         colors: ['yellow', 'black', 'green', 'blue'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/HBZ5300_A0_GIYEROU1.jpg',
+        img: './assets/jpg/HBZ5300_A0_GIYEROU1.jpg',
     },
     {
         num: 35,
@@ -417,6 +417,6 @@ export const data = [
         colors: ['green', 'blue'],
         type: 'Air',
         level: 'beginner',
-        img: '../assets/jpg/HBZ31500_A00_KK2LQK7N.jpg',
+        img: './assets/jpg/HBZ31500_A00_KK2LQK7N.jpg',
     },
 ];
