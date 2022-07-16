@@ -1,6 +1,5 @@
 .main {
     background-color: $white-grey;
-    height: 50rem;
 }
 .filter-group {
     max-width: 15rem;
@@ -133,4 +132,13 @@
     margin-top: 1rem;
     font-size: 1.5rem;
     padding: 1rem;
+}
+
+// CARDS
+
+.card__image {
+    background-image: url('./assets/svg/logo-horizon-hobby-white.svg');
+    width: 100px;
+    height: 100px;
+    background-color: red;
 }
