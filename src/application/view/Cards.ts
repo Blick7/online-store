@@ -6,7 +6,7 @@ export default class Cards {
     constructor(container: HTMLElement) {
         this.container = container;
     }
-    getCardsList() {
+    getCardsList(): void {
         data.forEach((elem) => {
             const card = document.createElement('div');
             card.classList.add('card');
@@ -33,8 +33,6 @@ export default class Cards {
             `;
 
             this.container.append(card);
-
-            // console.log(elem);
         });
     }
 
