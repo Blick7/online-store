@@ -1,7 +1,7 @@
 export const data = [
     {
         num: 1,
-        name: '1/10 GRANITE VOLTAGE 2WD Brushed Mega Monster Truck RTR',
+        name: 'GRANITE 1/10 VOLTAGE 2WD Brushed Mega Monster Truck RTR',
         id: 'ARA102727',
         manufacturer: 'ARRMA RC',
         inStock: 4,
@@ -13,7 +13,7 @@ export const data = [
     },
     {
         num: 2,
-        name: '1/10 GRANITE 4WD V3 3S BLX Brushless Monster Truck RTR',
+        name: 'GRANITE 1/10 4WD V3 3S BLX Brushless Monster Truck RTR',
         id: 'ARA4302V3',
         manufacturer: 'ARRMA RC',
         inStock: 3,
@@ -25,7 +25,7 @@ export const data = [
     },
     {
         num: 3,
-        name: '1/8 KRATON 6S V5 4WD BLX Speed Monster Truck with Spektrum Firma RTR',
+        name: 'KRATON 1/8 6S V5 4WD BLX Speed Monster Truck with Spektrum Firma RTR',
         id: 'ARA8608V5',
         manufacturer: 'ARRMA RC',
         inStock: 2,
@@ -37,7 +37,7 @@ export const data = [
     },
     {
         num: 4,
-        name: '1/5 KRATON 4WD 8S BLX Brushless Speed Monster Truck RTR',
+        name: 'KRATON 1/5 4WD 8S BLX Brushless Speed Monster Truck RTR',
         id: 'ARA110002',
         manufacturer: 'ARRMA RC',
         inStock: 1,
@@ -49,7 +49,7 @@ export const data = [
     },
     {
         num: 5,
-        name: '1/10 KRATON 4X4 4S V2 BLX Speed Monster Truck RTR',
+        name: 'KRATON 1/10 4X4 4S V2 BLX Speed Monster Truck RTR',
         id: 'ARA4408V2',
         manufacturer: 'ARRMA RC',
         inStock: 6,
@@ -61,7 +61,7 @@ export const data = [
     },
     {
         num: 6,
-        name: '1/10 OUTCAST 4X4 4S V2 BLX Stunt Truck RTR',
+        name: 'OUTCAST 1/10 4X4 4S V2 BLX Stunt Truck RTR',
         id: 'ARA4410V2',
         manufacturer: 'ARRMA RC',
         inStock: 4,
@@ -73,7 +73,7 @@ export const data = [
     },
     {
         num: 7,
-        name: '1/8 VENDETTA 4WD 3S BLX Brushless All-Road Speed Bash Racer',
+        name: 'VENDETTA 1/8 4WD 3S BLX Brushless All-Road Speed Bash Racer',
         id: 'ARA4319V3',
         manufacturer: 'ARRMA RC',
         inStock: 4,
@@ -85,7 +85,7 @@ export const data = [
     },
     {
         num: 8,
-        name: '1/7 FELONY 6S BLX Street Bash All-Road Muscle Car RTR',
+        name: 'FELONY 1/7 6S BLX Street Bash All-Road Muscle Car RTR',
         id: 'ARA7617V2',
         manufacturer: 'ARRMA RC',
         inStock: 1,
@@ -97,7 +97,7 @@ export const data = [
     },
     {
         num: 9,
-        name: '1/8 INFRACTION 4WD MEGA Resto-Mod Truck RTR',
+        name: 'INFRACTION 1/8 4WD MEGA Resto-Mod Truck RTR',
         id: 'ARA4215V3',
         manufacturer: 'ARRMA RC',
         inStock: 8,
@@ -109,7 +109,7 @@ export const data = [
     },
     {
         num: 10,
-        name: '1/7 INFRACTION 6S BLX V2 All-Road Truck RTR',
+        name: 'INFRACTION 1/7 6S BLX V2 All-Road Truck RTR',
         id: 'ARA7615V2',
         manufacturer: 'ARRMA RC',
         inStock: 3,
@@ -121,7 +121,7 @@ export const data = [
     },
     {
         num: 11,
-        name: '1/6 SCX6 Jeep JLU Wrangler 4WD Rock Crawler RTR',
+        name: 'SCX6 1/6 Jeep JLU Wrangler 4WD Rock Crawler RTR',
         id: 'AXI05000',
         manufacturer: 'Axial RC',
         inStock: 2,
@@ -133,7 +133,7 @@ export const data = [
     },
     {
         num: 12,
-        name: '1/10 SCX10 III Base Camp 4WD Rock Crawler Brushed RTR',
+        name: 'SCX10 1/10 III Base Camp 4WD Rock Crawler Brushed RTR',
         id: 'AXI03027',
         manufacturer: 'Axial RC',
         inStock: 7,
@@ -145,7 +145,7 @@ export const data = [
     },
     {
         num: 13,
-        name: '1/10 SCX10III Jeep JT Gladiator with Portals RTR',
+        name: 'SCX10III 1/10 Jeep JT Gladiator with Portals RTR',
         id: 'AXI03006B',
         manufacturer: 'Axial RC',
         inStock: 2,
@@ -157,7 +157,7 @@ export const data = [
     },
     {
         num: 14,
-        name: '1/10 Capra 1.9 4WS Unlimited Trail Buggy RTR',
+        name: 'Capra 1/10 1.9 4WS Unlimited Trail Buggy RTR',
         id: 'AXI03022',
         manufacturer: 'Axial RC',
         inStock: 5,
@@ -169,7 +169,7 @@ export const data = [
     },
     {
         num: 15,
-        name: '1/10 RBX10 Ryft 4WD Rock Bouncer Kit, Gray',
+        name: 'RBX10 1/10 Ryft 4WD Rock Bouncer Kit, Gray',
         id: 'AXI03009',
         manufacturer: 'Axial RC',
         inStock: 3,
@@ -181,7 +181,7 @@ export const data = [
     },
     {
         num: 16,
-        name: '1/18 Yeti Jr. Can-Am Maverick 4WD Brushed RTR',
+        name: 'Yeti 1/18 Jr. Can-Am Maverick 4WD Brushed RTR',
         id: 'AXI90069',
         manufacturer: 'Axial RC',
         inStock: 2,

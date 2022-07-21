@@ -1,13 +1,25 @@
 import { data } from '../data';
+import { filters } from '../filters';
 import { Idata } from '../type/type';
+import Filter from './Filter';
+import Control from '../controller/Control';
 
 export default class Cards {
     private container: HTMLElement;
+
     constructor(container: HTMLElement) {
         this.container = container;
     }
-    getCardsList(): void {
-        data.forEach((elem) => {
+
+    // showCards() {
+    //     this.getCardsList();
+    // }
+    //! WORK WITH DATA THEN CALL getCardsList FUNCTION
+    getCardsList(data: Idata[]): void {
+        // if (data) return;
+        data.forEach((elem: Idata) => {
+            //todo: call filter func here
+
             const card = document.createElement('div');
             card.classList.add('card');
             card.innerHTML =
