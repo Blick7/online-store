@@ -15,13 +15,14 @@ export default class Control {
 
     setButtonListeners() {
         const optionBtn = document.querySelector<HTMLOptionElement>('.sort-by__select');
-        const manufacturerBtn = document.querySelectorAll<HTMLElement>('.button-manufacturer');
+        const filtersBtn = document.querySelectorAll<HTMLElement>('.button');
         const colorBtn = document.querySelectorAll<HTMLDivElement>('.button-color');
 
-        if (!manufacturerBtn || !optionBtn) return; // if doesnt exist
+        if (!filtersBtn || !optionBtn) return; // if doesnt exist
 
         // add listener for select
         optionBtn.onchange = (event) => {
+            // todo
             if (this.container) this.container.innerHTML = ''; // clear container
 
             const value = (<HTMLSelectElement>event.target)?.value;
@@ -29,40 +30,42 @@ export default class Control {
         };
 
         // add listener for manufacturerBtn
-        manufacturerBtn.forEach((item) => {
+        filtersBtn.forEach((item) => {
             item.onclick = (event) => {
-                if (this.container) this.container.innerHTML = ''; // clear container
-
-                const value = item.textContent;
-                if (!value) return;
-                filters.manufacturer[value as keyof typeof filters.manufacturer] =
-                    !filters.manufacturer[value as keyof typeof filters.manufacturer]; //? invert bool parameter - dont need this
+                // todo
+                //! USE SORT WHEN SORT BY CATEGORY
+                // get object key and value
+                const objKey = (<HTMLElement>event.target)?.dataset.filter;
+                const objValue = (<HTMLElement>event.target)?.id;
 
                 if ((<HTMLElement>event.target).classList.contains('filter-group__button--active')) {
                     (<HTMLElement>event.target).classList.remove('filter-group__button--active');
-                    this.filter.removeFilterByManufacturer(value);
+                    // remove item from filter
+                    const index = filters[objKey as keyof typeof filters].indexOf(objValue);
+                    filters[objKey as keyof typeof filters].splice(index, 1);
                 } else {
                     (<HTMLElement>event.target).classList.add('filter-group__button--active');
-                    this.filter.filterByManufacturer(value); // add category to filter
+                    // add item to filter
+                    filters[objKey as keyof typeof filters].push(objValue);
                 }
+                console.log(filters);
             };
         });
 
         colorBtn.forEach((item) => {
             item.onclick = (event) => {
-                if (this.container) this.container.innerHTML = ''; // clear container
-
-                const value = item.id;
-                if (!value) return;
-                filters.colors[value as keyof typeof filters.colors] =
-                    !filters.colors[value as keyof typeof filters.colors]; //? invert bool parameter - dont need this
+                const objKey = (<HTMLElement>event.target)?.dataset.filter;
+                const objValue = (<HTMLElement>event.target)?.id;
 
                 if ((<HTMLElement>event.target).classList.contains('color__item--active')) {
                     (<HTMLElement>event.target).classList.remove('color__item--active');
-                    this.filter.removefilterByColor(value);
+                    // remove item from filter
+                    const index = filters[objKey as keyof typeof filters].indexOf(objValue);
+                    filters[objKey as keyof typeof filters].splice(index, 1);
                 } else {
                     (<HTMLElement>event.target).classList.add('color__item--active');
-                    this.filter.filterByColor(value);
+                    // add item to filter
+                    filters[objKey as keyof typeof filters].push(objValue);
                 }
             };
         });
