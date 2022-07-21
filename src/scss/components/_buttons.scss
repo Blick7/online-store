@@ -12,3 +12,7 @@
     transition: 0.5s;
     cursor: pointer;
 }
+
+.filter-group__button--active {
+    background-color: $primary-yellow;
+}
