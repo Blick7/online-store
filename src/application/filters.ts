@@ -1,26 +1,8 @@
-export const filters = {
-    // isActive: false,
-    manufacturer: {
-        'price-lowest': false,
-        'price-highest': false,
-        'Name(A-Z)': false,
-        'Name(Z-A)': false,
-        'ARRMA RC': false,
-        'Axial RC': false,
-        Blade: false,
-        'E-flite': false,
-        HobbyZone: false,
-    },
-    colors: {
-        red: false,
-        yellow: false,
-        blue: false,
-        green: false,
-        black: false,
-    },
-    Air: false,
-    Ground: false,
-    Beginner: false,
-    Professional: false,
-    Experienced: false,
+import { Ifilter } from './type/type';
+
+export const filters: Ifilter = {
+    manufacturer: [],
+    colors: [],
+    type: [],
+    level: [],
 };
