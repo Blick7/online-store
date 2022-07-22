@@ -8,7 +8,7 @@ export const data = [
         price: 129.99,
         colors: ['blue', 'red', 'black'],
         type: 'Ground',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/ARA102727_A0_8K0Y8R2G.jpg',
     },
     {
@@ -20,7 +20,7 @@ export const data = [
         price: 339.99,
         colors: ['green', 'red'],
         type: 'Ground',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/ARA4302V3_A0_MEU77BNV.jpg',
     },
     {
@@ -32,7 +32,7 @@ export const data = [
         price: 549.99,
         colors: ['blue', 'red'],
         type: 'Ground',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/ARA8608V5_A00_J6P80WZ6.jpg',
     },
     {
@@ -44,7 +44,7 @@ export const data = [
         price: 969.99,
         colors: ['green'],
         type: 'Ground',
-        level: 'professional',
+        level: 'Professional',
         img: './assets/jpg/ARA110002_A0_D9NLOKNG.jpg',
     },
     {
@@ -56,7 +56,7 @@ export const data = [
         price: 469.99,
         colors: ['green', 'blue'],
         type: 'Ground',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/ARA4408V2_A31_1J2TZNUE.jpg',
     },
     {
@@ -68,7 +68,7 @@ export const data = [
         price: 469.99,
         colors: ['blue'],
         type: 'Ground',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/ARA4410V2_A1_6ZKRDYXU.jpg',
     },
     {
@@ -80,7 +80,7 @@ export const data = [
         price: 369.99,
         colors: ['blue', 'green'],
         type: 'Ground',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/ARA4319V3_A39_AV7FKOSS.jpg',
     },
     {
@@ -92,7 +92,7 @@ export const data = [
         price: 649.99,
         colors: ['black'],
         type: 'Ground',
-        level: 'professional',
+        level: 'Professional',
         img: './assets/jpg/ARA7617V2_A00_HXFUGCYH.jpg',
     },
     {
@@ -104,7 +104,7 @@ export const data = [
         price: 299.99,
         colors: ['blue', 'red'],
         type: 'Ground',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/ARA4215V3_A45_L7V85QKR.jpg',
     },
     {
@@ -116,7 +116,7 @@ export const data = [
         price: 649.99,
         colors: ['blue'],
         type: 'Ground',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/ARA7615V2_A00_VVLGIV0P.jpg',
     },
     {
@@ -128,7 +128,7 @@ export const data = [
         price: 1099.99,
         colors: ['green'],
         type: 'Ground',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/AXI05000_A7_8QW1G766.jpg',
     },
     {
@@ -140,7 +140,7 @@ export const data = [
         price: 389.99,
         colors: ['green', 'blue'],
         type: 'Ground',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/AXI03027_A2_68L2IVW8.jpg',
     },
     {
@@ -152,7 +152,7 @@ export const data = [
         price: 529.99,
         colors: ['black'],
         type: 'Ground',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/AXI03006B_A0_E28KMLTG.jpg',
     },
     {
@@ -164,7 +164,7 @@ export const data = [
         price: 549.99,
         colors: ['black', 'red'],
         type: 'Ground',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/AXI03022_A01_WJPHKM20.jpg',
     },
     {
@@ -176,7 +176,7 @@ export const data = [
         price: 329.99,
         colors: ['blue'],
         type: 'Ground',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/AXI03009_A10_L963KB47.jpg',
     },
     {
@@ -188,7 +188,7 @@ export const data = [
         price: 174.99,
         colors: ['black'],
         type: 'Ground',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/AXI90069_A0_5GHRCI1S.jpg',
     },
     {
@@ -200,7 +200,7 @@ export const data = [
         price: 159.99,
         colors: ['blue'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/BLH01300_A00_G5TBTR1R.jpg',
     },
     {
@@ -212,7 +212,7 @@ export const data = [
         price: 999.99,
         colors: ['green'],
         type: 'Air',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/BLH4925SC2_A0_0JM6MAA6.jpg',
     },
     {
@@ -224,7 +224,7 @@ export const data = [
         price: 299.99,
         colors: ['green', 'red'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/BLH7050_A0_EJQ7MGOV.jpg',
     },
     {
@@ -236,7 +236,7 @@ export const data = [
         price: 279.99,
         colors: ['green', 'black'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/BLH05850_A0_SZZOO2NL.jpg',
     },
     {
@@ -248,7 +248,7 @@ export const data = [
         price: 229.99,
         colors: ['green', 'black'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/BLH05850_A0_SZZOO2NL.jpg',
     },
     {
@@ -260,7 +260,7 @@ export const data = [
         price: 229.99,
         colors: ['green'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/EFL38500_A00_82G9GEE2.jpg',
     },
     {
@@ -272,7 +272,7 @@ export const data = [
         price: 599.99,
         colors: ['red'],
         type: 'Air',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/EFL12575_A00_SFF5Y9J2.jpg',
     },
     {
@@ -284,7 +284,7 @@ export const data = [
         price: 219.99,
         colors: ['red', 'blue'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/EFL36750_A00_JCGR9MJH.jpg',
     },
     {
@@ -296,7 +296,7 @@ export const data = [
         price: 229.99,
         colors: ['blue'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/EFL97500_A00_AZXQEKRY.jpg',
     },
     {
@@ -308,7 +308,7 @@ export const data = [
         price: 279.99,
         colors: ['yellow'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/EFL0975_A97_PKJ9S41C.jpg',
     },
     {
@@ -320,7 +320,7 @@ export const data = [
         price: 399.99,
         colors: ['blue'],
         type: 'Air',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/EFL12350_A00_2T2569MU.jpg',
     },
     {
@@ -332,7 +332,7 @@ export const data = [
         price: 469.99,
         colors: ['blue'],
         type: 'Air',
-        level: 'professional',
+        level: 'Professional',
         img: './assets/jpg/EFL12775_A00_UNYYFSW4.jpg',
     },
     {
@@ -344,7 +344,7 @@ export const data = [
         price: 119.99,
         colors: ['red'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/HBZ5700_A00_00OUH6FL.jpg',
     },
     {
@@ -356,7 +356,7 @@ export const data = [
         price: 119.99,
         colors: ['blue'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/HBZ44500_A0_JQ6HNKKL.jpg',
     },
     {
@@ -368,7 +368,7 @@ export const data = [
         price: 449.99,
         colors: ['yellow', 'blue'],
         type: 'Air',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/HBZ32000LE_A20_LLX6GX2K.jpg',
     },
     {
@@ -380,7 +380,7 @@ export const data = [
         price: 299.99,
         colors: ['red', 'blue'],
         type: 'Air',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/HBZ31000_A08_1D2F1L9R.jpg',
     },
     {
@@ -392,7 +392,7 @@ export const data = [
         price: 199.99,
         colors: ['red', 'black', 'green'],
         type: 'Air',
-        level: 'experienced',
+        level: 'Experienced',
         img: './assets/jpg/HBZ38000_A00_TQNMKRZV.jpg',
     },
     {
@@ -404,7 +404,7 @@ export const data = [
         price: 79.99,
         colors: ['yellow', 'black', 'green', 'blue'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/HBZ5300_A0_GIYEROU1.jpg',
     },
     {
@@ -416,7 +416,7 @@ export const data = [
         price: 249.99,
         colors: ['green', 'blue'],
         type: 'Air',
-        level: 'beginner',
+        level: 'Beginner',
         img: './assets/jpg/HBZ31500_A00_KK2LQK7N.jpg',
     },
 ];
