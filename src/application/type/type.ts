@@ -16,4 +16,6 @@ export interface Ifilter {
     colors: Array<string>;
     type: Array<string>;
     level: Array<string>;
+    inStockRange: Array<string>;
+    priceRange: Array<string>;
 }
