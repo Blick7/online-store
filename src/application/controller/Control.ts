@@ -2,6 +2,8 @@ import { filters } from '../filters';
 import { Ifilter } from '../type/type';
 import Cards from '../view/Cards';
 import Filter from '../view/Filter';
+import * as noUiSlider from 'nouislider';
+
 // todo move code from constructor to method and call it in function
 export default class Control {
     private container: HTMLElement;
@@ -17,8 +19,12 @@ export default class Control {
         const optionBtn = document.querySelector<HTMLOptionElement>('.sort-by__select');
         const filtersBtn = document.querySelectorAll<HTMLElement>('.button');
         const colorBtn = document.querySelectorAll<HTMLDivElement>('.button-color');
+        const resetAllFiltersBtn = document.querySelector<HTMLDivElement>('.reset-button');
 
-        if (!filtersBtn || !optionBtn) return; // if doesnt exist
+        const sliderInStock = document.getElementById('sliderInStock') as noUiSlider.target;
+        const sliderPrice = document.getElementById('sliderPrice') as noUiSlider.target;
+
+        if (!filtersBtn || !optionBtn || !resetAllFiltersBtn) return; // if doesnt exist
 
         // add listener for select
         optionBtn.onchange = (event) => {
@@ -26,7 +32,9 @@ export default class Control {
             if (this.container) this.container.innerHTML = ''; // clear container
 
             const value = (<HTMLSelectElement>event.target)?.value;
-            this.filter.filterSortBy(value); // send filter parameter
+            console.log(value);
+            this.filter.changeSortBy(value);
+            this.filter.filterCards();
         };
 
         // add listener for manufacturerBtn
@@ -48,7 +56,7 @@ export default class Control {
                     // add item to filter
                     filters[objKey as keyof typeof filters].push(objValue);
                 }
-                console.log(filters);
+                this.filter.filterCards();
             };
         });
 
@@ -67,7 +75,71 @@ export default class Control {
                     // add item to filter
                     filters[objKey as keyof typeof filters].push(objValue);
                 }
+                this.filter.filterCards();
             };
+        });
+
+        resetAllFiltersBtn.onclick = () => {
+            //! TODO: fix reset filter
+            // clear all filters
+            const keys = Object.keys(filters);
+            keys.forEach((item) => {
+                filters[item as keyof typeof filters] = [];
+            });
+
+            // remove active classlist
+            colorBtn.forEach((item) => {
+                item.classList.remove('color__item--active');
+            });
+
+            this.filter.filterCards();
+            console.log(this.filter);
+        };
+
+        sliderInStock.noUiSlider?.on('update', () => {
+            if (!sliderInStock.noUiSlider?.get()) return;
+
+            const data = sliderInStock.noUiSlider.get() as string[];
+            const qLeft = document.querySelector<HTMLDivElement>('.in-stock__quantity-left');
+            const qRight = document.querySelector<HTMLDivElement>('.in-stock__quantity-right');
+            const leftVal = data[0].split('.')[0];
+            const rightVal = data[1].split('.')[0];
+
+            if (!qLeft || !qRight) return;
+
+            qLeft.textContent = leftVal;
+            qRight.textContent = rightVal;
+
+            const inStockRange = [];
+            inStockRange.push(leftVal);
+            inStockRange.push(rightVal);
+
+            filters.inStockRange = inStockRange;
+            console.log(leftVal);
+            if (this.filter) this.filter.filterCards(); // apply filter
+        });
+
+        sliderPrice.noUiSlider?.on('update', () => {
+            if (!sliderPrice.noUiSlider?.get()) return;
+
+            const data = sliderPrice.noUiSlider.get() as string[];
+            const qLeft = document.querySelector<HTMLDivElement>('.price__quantity-left');
+            const qRight = document.querySelector<HTMLDivElement>('.price__quantity-right');
+            const leftVal = data[0].split('.')[0];
+            const rightVal = data[1].split('.')[0];
+
+            if (!qLeft || !qRight) return;
+
+            qLeft.textContent = leftVal;
+            qRight.textContent = rightVal;
+
+            const priceRange = [];
+            priceRange.push(leftVal);
+            priceRange.push(rightVal);
+
+            filters.priceRange = priceRange;
+
+            if (this.filter) this.filter.filterCards(); // apply filterer
         });
     }
 }

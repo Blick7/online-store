@@ -5,4 +5,6 @@ export const filters: Ifilter = {
     colors: [],
     type: [],
     level: [],
+    inStockRange: [],
+    priceRange: [],
 };

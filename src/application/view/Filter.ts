@@ -9,19 +9,37 @@ import Cards from './Cards';
 export default class Filter {
     private dataCopy: Idata[];
     private filterList: Array<string>;
+    public sortBy: string;
+
     constructor() {
-        //todo
         this.dataCopy = JSON.parse(JSON.stringify(data)); // copy object
+        this.sortBy = 'Name(A-Z)'; // set sorting by default
         this.filterList = [];
     }
-    addFilter(value: Array<string>): void {
-        // todo
-        // this.filterList.push(value);
+
+    changeSortBy(value: string) {
+        this.sortBy = value;
     }
 
-    filterSortBy(value: string) {
-        //todo change to switch
-        switch (value) {
+    filterCards() {
+        const cardsElement = document.querySelector('.main__cards');
+        const cards = new Cards(<HTMLElement>cardsElement);
+
+        (<HTMLElement>cardsElement).innerHTML = '';
+
+        // call filters
+        this.filterSortBy();
+        this.setFilters();
+        cards.getCardsList(this.dataCopy);
+
+        if (this.dataCopy.length === 0) {
+            // TODO: fix error here
+            (<HTMLElement>cardsElement).innerHTML = 'UNIT NOT FOUND';
+        }
+    }
+
+    filterSortBy() {
+        switch (this.sortBy) {
             case 'Name(A-Z)':
                 this.dataCopy.sort((first, second) => (first.name > second.name ? 1 : -1));
                 break;
@@ -41,7 +59,26 @@ export default class Filter {
         cards.getCardsList(this.dataCopy);
     }
 
-    filterCards() {
-        //todo
+    setFilters() {
+        this.dataCopy = JSON.parse(JSON.stringify(data)); // fill data
+
+        if (filters.manufacturer.length !== 0)
+            this.dataCopy = this.dataCopy.filter((item) => filters.manufacturer.includes(item.manufacturer));
+
+        if (filters.colors.length !== 0)
+            this.dataCopy = this.dataCopy.filter((item) => filters.colors.some((elem) => item.colors.includes(elem)));
+
+        if (filters.type.length !== 0) this.dataCopy = this.dataCopy.filter((item) => filters.type.includes(item.type));
+
+        if (filters.level.length !== 0)
+            this.dataCopy = this.dataCopy.filter((item) => filters.level.includes(item.level));
+
+        this.dataCopy = this.dataCopy.filter(
+            (item) => Number(filters.inStockRange[0]) < item.inStock && Number(filters.inStockRange[1]) > item.inStock
+        );
+
+        this.dataCopy = this.dataCopy.filter(
+            (item) => Number(filters.priceRange[0]) < item.price && Number(filters.priceRange[1]) > item.price
+        );
     }
 }
