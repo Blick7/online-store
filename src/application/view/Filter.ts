@@ -21,23 +21,24 @@ export default class Filter {
 
     filterSortBy(value: string) {
         //todo change to switch
-        if (value === 'Name(A-Z)') {
-            this.dataCopy.sort((first, second) => (first.name > second.name ? 1 : -1));
-        }
-        if (value === 'Name(Z-A)') {
-            this.dataCopy.sort((first, second) => (first.name < second.name ? 1 : -1));
-        }
-
-        if (value === 'price-highest') {
-            this.dataCopy.sort((first, second) => (first.price > second.price ? 1 : -1));
-        }
-
-        if (value === 'price-lowest') {
-            this.dataCopy.sort((first, second) => (first.price < second.price ? 1 : -1));
+        switch (value) {
+            case 'Name(A-Z)':
+                this.dataCopy.sort((first, second) => (first.name > second.name ? 1 : -1));
+                break;
+            case 'Name(Z-A)':
+                this.dataCopy.sort((first, second) => (first.name < second.name ? 1 : -1));
+                break;
+            case 'price-highest':
+                this.dataCopy.sort((first, second) => (first.price < second.price ? 1 : -1));
+                break;
+            case 'price-lowest':
+                this.dataCopy.sort((first, second) => (first.price > second.price ? 1 : -1));
+                break;
+            default:
+                break;
         }
         const cards = new Cards(<HTMLElement>document.querySelector('.main__cards'));
         cards.getCardsList(this.dataCopy);
-        return this.dataCopy;
     }
 
     filterCards() {
