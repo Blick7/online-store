@@ -3,8 +3,6 @@ import { Idata } from '../type/type';
 import { data } from '../data';
 import Cards from './Cards';
 
-//todo: add filters in array and then form cards
-
 export default class Filter {
     private dataCopy: Idata[];
     public sortBy: string;
@@ -32,8 +30,6 @@ export default class Filter {
             this.filterSortBy(); // then sort
             cards.getCardsList(this.dataCopy);
         } else if (this.dataCopy.length === 0) {
-            // if no units found
-            // TODO: fix error here
             (<HTMLElement>cardsElement).innerHTML = 'UNIT NOT FOUND';
         } else {
             cards.getCardsList(this.dataCopy);

@@ -26,7 +26,6 @@ export default class Control {
 
         // add listener for select
         optionBtn.onchange = (event) => {
-            // todo
             if (this.container) this.container.innerHTML = ''; // clear container
 
             const value = (<HTMLSelectElement>event.target)?.value;
