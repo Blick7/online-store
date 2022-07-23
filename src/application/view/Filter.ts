@@ -56,7 +56,6 @@ export default class Filter {
     }
 
     setFilters() {
-        console.log(filters);
         this.dataCopy = JSON.parse(JSON.stringify(data)); // fill data
 
         if (filters.manufacturer.length !== 0)

@@ -1,6 +1,8 @@
 import { filters } from '../filters';
 import Filter from '../view/Filter';
 import * as noUiSlider from 'nouislider';
+import { data } from '../data';
+import { shoppingCart } from '../shoppingCart';
 
 export default class Control {
     private container: HTMLElement;
@@ -10,6 +12,11 @@ export default class Control {
         this.container = container;
         this.setButtonListeners();
         this.filter = new Filter();
+
+        // set listeners on cards when dom is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            this.setCardButtons();
+        });
     }
 
     setButtonListeners() {
@@ -33,6 +40,7 @@ export default class Control {
             console.log(value);
             this.filter.changeSortBy(value);
             this.filter.filterCards();
+            this.setCardButtons(); // set cards button listeners
         };
 
         // add listener for manufacturerBtn
@@ -53,6 +61,7 @@ export default class Control {
                     filters[objKey as keyof typeof filters].push(objValue);
                 }
                 this.filter.filterCards();
+                this.setCardButtons(); // set cards button listeners
             };
         });
 
@@ -72,6 +81,7 @@ export default class Control {
                     filters[objKey as keyof typeof filters].push(objValue);
                 }
                 this.filter.filterCards();
+                this.setCardButtons(); // set cards button listeners
             };
         });
 
@@ -106,6 +116,8 @@ export default class Control {
             // reset copydata
             const resetFilters = true;
             this.filter.filterCards(resetFilters);
+
+            this.setCardButtons(); // set cards button listeners
         };
 
         sliderInStock.noUiSlider?.on('update', () => {
@@ -129,6 +141,7 @@ export default class Control {
             filters.inStockRange = inStockRange;
 
             if (this.filter) this.filter.filterCards(); // apply filter
+            this.setCardButtons(); // set cards button listeners
         });
 
         sliderPrice.noUiSlider?.on('update', () => {
@@ -152,17 +165,49 @@ export default class Control {
             filters.priceRange = priceRange;
 
             if (this.filter) this.filter.filterCards(); // apply filter
+
+            this.setCardButtons(); // set cards button listeners
         });
 
         searchInput.oninput = () => {
             filters.searchInput = [searchInput.value];
             this.filter.filterCards();
+
+            this.setCardButtons(); // set cards button listeners
         };
 
         searchClear.onclick = () => {
             filters.searchInput = [];
             searchInput.value = '';
             this.filter.filterCards();
+
+            this.setCardButtons(); // set cards button listeners
         };
+    }
+
+    setCardButtons() {
+        const cardBuyBtn = document.querySelectorAll<HTMLElement>('.card__buy-item');
+        cardBuyBtn.forEach((button) => {
+            button.onclick = (event) => {
+                if (!event.target) return;
+                const card = (<HTMLElement>event.target).closest('.card');
+                const cardName = card?.querySelector('.card__name')?.textContent;
+
+                const shoppingCartQuantity = document.querySelector<HTMLElement>('.shopping-cart__items-amount');
+
+                data.forEach((item) => {
+                    if (item.name === cardName) {
+                        shoppingCart.push(item);
+                        console.log(shoppingCartQuantity);
+
+                        (<HTMLElement>shoppingCartQuantity).textContent = (
+                            Number((<HTMLElement>shoppingCartQuantity)?.textContent) + 1
+                        ).toString();
+                    }
+                });
+
+                console.log(shoppingCart);
+            };
+        });
     }
 }
