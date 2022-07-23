@@ -12,6 +12,7 @@ export interface Idata {
 }
 
 export interface Ifilter {
+    searchInput: Array<string>;
     manufacturer: Array<string>;
     colors: Array<string>;
     type: Array<string>;

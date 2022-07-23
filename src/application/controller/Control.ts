@@ -18,11 +18,12 @@ export default class Control {
         const filtersBtn = document.querySelectorAll<HTMLElement>('.button');
         const colorBtn = document.querySelectorAll<HTMLDivElement>('.button-color');
         const resetAllFiltersBtn = document.querySelector<HTMLDivElement>('.reset-button');
+        const searchInput = document.querySelector<HTMLInputElement>('.filter-group__search-input');
 
         const sliderInStock = document.getElementById('sliderInStock') as noUiSlider.target;
         const sliderPrice = document.getElementById('sliderPrice') as noUiSlider.target;
 
-        if (!filtersBtn || !optionBtn || !resetAllFiltersBtn) return; // if doesnt exist
+        if (!filtersBtn || !optionBtn || !resetAllFiltersBtn || !searchInput) return; // if doesnt exist
 
         // add listener for select
         optionBtn.onchange = (event) => {
@@ -153,5 +154,11 @@ export default class Control {
 
             if (this.filter) this.filter.filterCards(); // apply filter
         });
+
+        searchInput.oninput = () => {
+            filters.searchInput = [searchInput.value];
+            console.log(searchInput.value);
+            this.filter.filterCards();
+        };
     }
 }
