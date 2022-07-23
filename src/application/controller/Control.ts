@@ -198,15 +198,12 @@ export default class Control {
                 data.forEach((item) => {
                     if (item.name === cardName) {
                         shoppingCart.push(item);
-                        console.log(shoppingCartQuantity);
 
                         (<HTMLElement>shoppingCartQuantity).textContent = (
                             Number((<HTMLElement>shoppingCartQuantity)?.textContent) + 1
                         ).toString();
                     }
                 });
-
-                console.log(shoppingCart);
             };
         });
     }
