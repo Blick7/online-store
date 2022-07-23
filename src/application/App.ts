@@ -9,7 +9,6 @@ export default class App {
     constructor() {
         this.cards = new Cards(<HTMLElement>document.querySelector('.main__cards'));
         this.control = new Control(<HTMLElement>document.querySelector('.main__cards'));
-
         this.cards.getCardsList(data);
     }
 }

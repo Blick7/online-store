@@ -24,15 +24,14 @@ export default class Filter {
     filterCards() {
         const cardsElement = document.querySelector('.main__cards');
         const cards = new Cards(<HTMLElement>cardsElement);
-
         (<HTMLElement>cardsElement).innerHTML = '';
 
-        // call filters
-        this.filterSortBy();
-        this.setFilters();
+        this.setFilters(); // apply filters
+        this.filterSortBy(); // then sort
         cards.getCardsList(this.dataCopy);
 
         if (this.dataCopy.length === 0) {
+            // if no units found
             // TODO: fix error here
             (<HTMLElement>cardsElement).innerHTML = 'UNIT NOT FOUND';
         }
@@ -55,8 +54,6 @@ export default class Filter {
             default:
                 break;
         }
-        const cards = new Cards(<HTMLElement>document.querySelector('.main__cards'));
-        cards.getCardsList(this.dataCopy);
     }
 
     setFilters() {
@@ -74,11 +71,11 @@ export default class Filter {
             this.dataCopy = this.dataCopy.filter((item) => filters.level.includes(item.level));
 
         this.dataCopy = this.dataCopy.filter(
-            (item) => Number(filters.inStockRange[0]) < item.inStock && Number(filters.inStockRange[1]) > item.inStock
+            (item) => Number(filters.inStockRange[0]) <= item.inStock && Number(filters.inStockRange[1]) >= item.inStock
         );
 
         this.dataCopy = this.dataCopy.filter(
-            (item) => Number(filters.priceRange[0]) < item.price && Number(filters.priceRange[1]) > item.price
+            (item) => Number(filters.priceRange[0]) <= item.price && Number(filters.priceRange[1]) >= item.price
         );
     }
 }

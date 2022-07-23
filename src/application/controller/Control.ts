@@ -115,7 +115,7 @@ export default class Control {
             inStockRange.push(rightVal);
 
             filters.inStockRange = inStockRange;
-            console.log(leftVal);
+
             if (this.filter) this.filter.filterCards(); // apply filter
         });
 
@@ -139,7 +139,7 @@ export default class Control {
 
             filters.priceRange = priceRange;
 
-            if (this.filter) this.filter.filterCards(); // apply filterer
+            if (this.filter) this.filter.filterCards(); // apply filter
         });
     }
 }
