@@ -2,7 +2,6 @@ import { filters } from '../filters';
 import Filter from '../view/Filter';
 import * as noUiSlider from 'nouislider';
 
-// todo move code from constructor to method and call it in function
 export default class Control {
     private container: HTMLElement;
     private filter: Filter;

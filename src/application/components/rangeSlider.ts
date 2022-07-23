@@ -1,7 +1,5 @@
 import * as noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
-import { filters } from '../filters';
-import Filter from '../view/Filter';
 
 const sliderInStock = document.getElementById('sliderInStock') as noUiSlider.target;
 const sliderPrice = document.getElementById('sliderPrice') as noUiSlider.target;

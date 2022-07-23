@@ -1,8 +1,4 @@
-import { data } from '../data';
-import { filters } from '../filters';
 import { Idata } from '../type/type';
-import Filter from './Filter';
-import Control from '../controller/Control';
 
 export default class Cards {
     private container: HTMLElement;
@@ -11,12 +7,7 @@ export default class Cards {
         this.container = container;
     }
 
-    // showCards() {
-    //     this.getCardsList();
-    // }
-    //! WORK WITH DATA THEN CALL getCardsList FUNCTION
     getCardsList(data: Idata[]): void {
-        // if (data) return;
         data.forEach((elem: Idata) => {
             //todo: call filter func here
 

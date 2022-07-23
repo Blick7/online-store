@@ -7,7 +7,6 @@ export default class App {
 
     constructor() {
         this.control = new Control(<HTMLElement>document.querySelector('.main__cards'));
-
         this.filter = new Filter();
         this.filter.filterCards();
     }
