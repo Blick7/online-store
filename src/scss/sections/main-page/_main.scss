@@ -200,6 +200,13 @@ main .container {
     transform: scale(1.05);
 }
 
+.card__error-title {
+    color: #d31900;
+    font-size: 4rem;
+    padding-top: 5rem;
+    padding-left: 1rem;
+}
+
 .card__image {
     display: flex;
     flex-direction: column;
@@ -249,7 +256,6 @@ main .container {
     padding-top: 1rem;
 }
 
-
 .card__buy-item {
     background-image: url('./assets/svg/shopping-cart-svgrepo-com.svg');
     background-repeat: no-repeat;
@@ -270,4 +276,38 @@ main .container {
 
 .card__buy-item--active {
     filter: invert(23%) sepia(86%) saturate(6368%) hue-rotate(13deg) brightness(87%) contrast(111%); // set red color
+}
+
+// MEDIA
+
+@media (max-width: 41.25rem) {
+    // 660px
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .filter-group {
+        position: static;
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media (max-width: 23.4375rem) { // 375px
+    .shop-name__logo {
+        width: 12rem;
+        height: 2.2rem;
+        background-size: 12rem;
+    }
+
+    .shopping-cart__image {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .card {
+        width: 16rem;
+    }
 }

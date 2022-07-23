@@ -30,7 +30,9 @@ export default class Filter {
             this.filterSortBy(); // then sort
             cards.getCardsList(this.dataCopy);
         } else if (this.dataCopy.length === 0) {
-            (<HTMLElement>cardsElement).innerHTML = 'UNIT NOT FOUND';
+            (<HTMLElement>cardsElement).innerHTML = `
+                <h2 class="card__error-title">Sorry, no mathes found...</h2>
+            `;
         } else {
             cards.getCardsList(this.dataCopy);
         }
