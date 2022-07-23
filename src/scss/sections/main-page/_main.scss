@@ -32,6 +32,21 @@ main .container {
 // SEARCH
 .filter-group__search {
     text-align: center;
+
+    position: relative;
+}
+
+.search__clear {
+    background-image: url('./assets/svg/cross-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    width: 1.2rem;
+    height: 1.2rem;
+
+    position: absolute;
+    right: 1rem;
+    top: 0.6rem;
+
+    cursor: pointer;
 }
 
 .filter-group__search-input {

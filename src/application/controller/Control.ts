@@ -18,10 +18,11 @@ export default class Control {
         const colorBtn = document.querySelectorAll<HTMLDivElement>('.button-color');
         const resetAllFiltersBtn = document.querySelector<HTMLDivElement>('.reset-button');
         const searchInput = document.querySelector<HTMLInputElement>('.filter-group__search-input');
+        const searchClear = document.querySelector<HTMLDivElement>('.search__clear');
         const sliderInStock = document.getElementById('sliderInStock') as noUiSlider.target;
         const sliderPrice = document.getElementById('sliderPrice') as noUiSlider.target;
 
-        if (!filtersBtn || !optionBtn || !resetAllFiltersBtn || !searchInput) return; // if doesnt exist
+        if (!filtersBtn || !optionBtn || !resetAllFiltersBtn || !searchInput || !searchClear) return; // if doesnt exist
         searchInput.focus(); // set cursor when page is loaded
 
         // add listener for select
@@ -155,7 +156,13 @@ export default class Control {
 
         searchInput.oninput = () => {
             filters.searchInput = [searchInput.value];
-            console.log(searchInput.value);
+            this.filter.filterCards();
+        };
+
+        searchClear.onclick = () => {
+            console.log('dd');
+            filters.searchInput = [];
+            searchInput.value = '';
             this.filter.filterCards();
         };
     }
