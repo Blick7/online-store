@@ -160,7 +160,6 @@ export default class Control {
         };
 
         searchClear.onclick = () => {
-            console.log('dd');
             filters.searchInput = [];
             searchInput.value = '';
             this.filter.filterCards();
