@@ -81,5 +81,12 @@ export default class Filter {
         this.dataCopy = this.dataCopy.filter(
             (item) => Number(filters.priceRange[0]) <= item.price && Number(filters.priceRange[1]) >= item.price
         );
+
+        if (filters.searchInput.length !== 0)
+            this.dataCopy = this.dataCopy.filter(
+                (item) =>
+                    item.name.toLowerCase().includes(filters.searchInput[0].toLowerCase()) ||
+                    item.id.toLowerCase().includes(filters.searchInput[0].toLowerCase())
+            );
     }
 }
