@@ -1,6 +1,4 @@
 import { filters } from '../filters';
-import { Ifilter } from '../type/type';
-import Cards from '../view/Cards';
 import Filter from '../view/Filter';
 import * as noUiSlider from 'nouislider';
 
@@ -40,8 +38,6 @@ export default class Control {
         // add listener for manufacturerBtn
         filtersBtn.forEach((item) => {
             item.onclick = (event) => {
-                // todo
-                //! USE SORT WHEN SORT BY CATEGORY
                 // get object key and value
                 const objKey = (<HTMLElement>event.target)?.dataset.filter;
                 const objValue = (<HTMLElement>event.target)?.id;
@@ -80,20 +76,36 @@ export default class Control {
         });
 
         resetAllFiltersBtn.onclick = () => {
-            //! TODO: fix reset filter
             // clear all filters
             const keys = Object.keys(filters);
             keys.forEach((item) => {
                 filters[item as keyof typeof filters] = [];
             });
 
+            // reset sliders to default values
+            filters.inStockRange = ['0', '20'];
+            filters.priceRange = ['0', '1100'];
+            sliderInStock.noUiSlider?.set(['0', '20']);
+            sliderPrice.noUiSlider?.set(['1', '1100']);
+
             // remove active classlist
             colorBtn.forEach((item) => {
                 item.classList.remove('color__item--active');
             });
 
-            this.filter.filterCards();
-            console.log(this.filter);
+            filtersBtn.forEach((item) => {
+                item.classList.remove('filter-group__button--active');
+            });
+
+            // set sortBy to default ('Name(A-Z)')
+            this.filter.sortBy = 'Name(A-Z)';
+            const select = optionBtn.getElementsByTagName('option');
+            select[2].selected = true;
+            // optionBtn.value = 'Name(A-Z)'; // is not working
+
+            // reset copydata
+            const resetFilters = true;
+            this.filter.filterCards(resetFilters);
         };
 
         sliderInStock.noUiSlider?.on('update', () => {

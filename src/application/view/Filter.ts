@@ -1,6 +1,5 @@
 import { filters } from '../filters';
 import { Idata } from '../type/type';
-import { Ifilter } from '../type/type';
 import { data } from '../data';
 import Cards from './Cards';
 
@@ -8,32 +7,36 @@ import Cards from './Cards';
 
 export default class Filter {
     private dataCopy: Idata[];
-    private filterList: Array<string>;
     public sortBy: string;
 
     constructor() {
         this.dataCopy = JSON.parse(JSON.stringify(data)); // copy object
         this.sortBy = 'Name(A-Z)'; // set sorting by default
-        this.filterList = [];
     }
 
     changeSortBy(value: string) {
         this.sortBy = value;
     }
 
-    filterCards() {
+    filterCards(resetFilters?: boolean) {
         const cardsElement = document.querySelector('.main__cards');
         const cards = new Cards(<HTMLElement>cardsElement);
         (<HTMLElement>cardsElement).innerHTML = '';
 
         this.setFilters(); // apply filters
         this.filterSortBy(); // then sort
-        cards.getCardsList(this.dataCopy);
 
-        if (this.dataCopy.length === 0) {
+        if (resetFilters) {
+            this.dataCopy = JSON.parse(JSON.stringify(data)); // fill data
+            this.setFilters(); // apply filters
+            this.filterSortBy(); // then sort
+            cards.getCardsList(this.dataCopy);
+        } else if (this.dataCopy.length === 0) {
             // if no units found
             // TODO: fix error here
             (<HTMLElement>cardsElement).innerHTML = 'UNIT NOT FOUND';
+        } else {
+            cards.getCardsList(this.dataCopy);
         }
     }
 
@@ -57,6 +60,7 @@ export default class Filter {
     }
 
     setFilters() {
+        console.log(filters);
         this.dataCopy = JSON.parse(JSON.stringify(data)); // fill data
 
         if (filters.manufacturer.length !== 0)

@@ -1,14 +1,14 @@
 import Control from './controller/Control';
-import { data } from './data';
-import Cards from './view/Cards';
+import Filter from './view/Filter';
 
 export default class App {
-    private cards: Cards;
     private control: Control;
+    private filter: Filter;
 
     constructor() {
-        this.cards = new Cards(<HTMLElement>document.querySelector('.main__cards'));
         this.control = new Control(<HTMLElement>document.querySelector('.main__cards'));
-        this.cards.getCardsList(data);
+
+        this.filter = new Filter();
+        this.filter.filterCards();
     }
 }
