@@ -4,12 +4,20 @@ html {
 .main {
     background-color: $white-grey;
 }
+
+main .container {
+    position: relative;
+}
+
 .filter-group {
-    max-width: 15rem;
+    width: 14.5rem;
     background-color: $white;
     padding: 0.8rem;
     border-radius: 1rem;
     height: 48rem;
+
+    position: sticky;
+    top: 1rem;
 }
 
 .filter-group__title {
@@ -48,7 +56,7 @@ html {
 
 .filter-group__brands {
     display: flex;
-    flex-direction: row;
+    // flex-direction: row;
     flex-wrap: wrap;
     padding-top: 0.4rem;
 }
@@ -148,9 +156,12 @@ html {
 .main__cards {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 2rem;
-
+    // margin: 0 2rem;/
+    // align-items: center;
+    justify-content: center;
     gap: 2rem;
+    max-width: 90rem;
+    padding: 0 1rem;
 }
 
 .card {
@@ -162,9 +173,16 @@ html {
     width: 18rem;
     max-height: 30rem;
     background-color: $white;
-
     padding: 1rem;
     border-radius: 1rem;
+
+    position: relative;
+
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card__image {
@@ -180,6 +198,7 @@ html {
 
     position: relative;
 }
+
 .card__tags {
     padding-top: 13.5rem;
 }
@@ -213,4 +232,27 @@ html {
 }
 .card__manufacturer {
     padding-top: 1rem;
+}
+
+
+.card__buy-item {
+    background-image: url('./assets/svg/shopping-cart-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    filter: invert(18%) sepia(67%) saturate(2566%) hue-rotate(194deg) brightness(100%) contrast(101%); // set carbon color
+
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    cursor: pointer;
+}
+
+.card__buy-item:hover {
+    filter: invert(23%) sepia(86%) saturate(6368%) hue-rotate(13deg) brightness(87%) contrast(111%); // set red color
+    transition: 0.5s;
+}
+
+.card__buy-item--active {
+    filter: invert(23%) sepia(86%) saturate(6368%) hue-rotate(13deg) brightness(87%) contrast(111%); // set red color
 }

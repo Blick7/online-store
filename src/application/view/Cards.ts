@@ -33,6 +33,7 @@ export default class Cards {
             <div class="card__type">Type: ${elem.type}</div>
             <div class="card__level">Level: ${elem.level}</div>
           </div>
+          <div class="card__buy-item"></div>
             `;
 
             this.container.append(card);

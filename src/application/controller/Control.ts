@@ -18,11 +18,11 @@ export default class Control {
         const colorBtn = document.querySelectorAll<HTMLDivElement>('.button-color');
         const resetAllFiltersBtn = document.querySelector<HTMLDivElement>('.reset-button');
         const searchInput = document.querySelector<HTMLInputElement>('.filter-group__search-input');
-
         const sliderInStock = document.getElementById('sliderInStock') as noUiSlider.target;
         const sliderPrice = document.getElementById('sliderPrice') as noUiSlider.target;
 
         if (!filtersBtn || !optionBtn || !resetAllFiltersBtn || !searchInput) return; // if doesnt exist
+        searchInput.focus(); // set cursor when page is loaded
 
         // add listener for select
         optionBtn.onchange = (event) => {
