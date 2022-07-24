@@ -11,8 +11,6 @@ export default class Filter {
     constructor() {
         this.dataCopy = JSON.parse(JSON.stringify(data)); // copy object
         this.sortBy = getSortByLocalStorage() || 'Name(A-Z)'; // set sorting by default
-
-        console.log(this.sortBy);
     }
 
     changeSortBy(value: string) {

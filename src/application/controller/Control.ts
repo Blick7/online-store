@@ -235,7 +235,6 @@ export default class Control {
     }
 
     activeButtonsLocalStorage() {
-        console.log(filters);
         const keys = Object.keys(filters);
         keys.forEach((item) => {
             const filterArray = filters[item as keyof typeof filters];
