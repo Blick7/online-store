@@ -3,6 +3,7 @@ import Filter from '../view/Filter';
 import * as noUiSlider from 'nouislider';
 import { data } from '../data';
 import { shoppingCart } from '../shoppingCart';
+import { getFiltersLocalStorage, getSortByLocalStorage } from '../localStorage';
 
 export default class Control {
     private container: HTMLElement;
@@ -11,12 +12,15 @@ export default class Control {
     constructor(container: HTMLElement) {
         this.container = container;
         this.setButtonListeners();
+        this.setSortByContent(); // get from localstorage and set content (just visual)
         this.filter = new Filter();
 
         // set listeners on cards when dom is fully loaded
         document.addEventListener('DOMContentLoaded', () => {
             this.setCardButtons();
         });
+
+        this.activeButtonsLocalStorage(); // set buttons active
     }
 
     setButtonListeners() {
@@ -24,20 +28,25 @@ export default class Control {
         const filtersBtn = document.querySelectorAll<HTMLElement>('.button');
         const colorBtn = document.querySelectorAll<HTMLDivElement>('.button-color');
         const resetAllFiltersBtn = document.querySelector<HTMLDivElement>('.reset-button');
+        const clearAllSettingsBtn = document.querySelector<HTMLDivElement>('.clear-settings-button');
         const searchInput = document.querySelector<HTMLInputElement>('.filter-group__search-input');
         const searchClear = document.querySelector<HTMLDivElement>('.search__clear');
         const sliderInStock = document.getElementById('sliderInStock') as noUiSlider.target;
         const sliderPrice = document.getElementById('sliderPrice') as noUiSlider.target;
 
-        if (!filtersBtn || !optionBtn || !resetAllFiltersBtn || !searchInput || !searchClear) return; // if doesnt exist
+        if (!filtersBtn || !optionBtn || !resetAllFiltersBtn || !searchInput || !searchClear || !clearAllSettingsBtn)
+            return; // if doesnt exist
         searchInput.focus(); // set cursor when page is loaded
+
+        // set input from localstorage as value
+        const storedInput = getFiltersLocalStorage();
+        searchInput.value = storedInput.searchInput.toString();
 
         // add listener for select
         optionBtn.onchange = (event) => {
             if (this.container) this.container.innerHTML = ''; // clear container
 
             const value = (<HTMLSelectElement>event.target)?.value;
-            console.log(value);
             this.filter.changeSortBy(value);
             this.filter.filterCards();
             this.setCardButtons(); // set cards button listeners
@@ -59,6 +68,7 @@ export default class Control {
                     (<HTMLElement>event.target).classList.add('filter-group__button--active');
                     // add item to filter
                     filters[objKey as keyof typeof filters].push(objValue);
+                    filters[objKey as keyof typeof filters] = [...new Set(filters[objKey as keyof typeof filters])]; // set unique
                 }
                 this.filter.filterCards();
                 this.setCardButtons(); // set cards button listeners
@@ -79,13 +89,13 @@ export default class Control {
                     (<HTMLElement>event.target).classList.add('color__item--active');
                     // add item to filter
                     filters[objKey as keyof typeof filters].push(objValue);
+                    filters[objKey as keyof typeof filters] = [...new Set(filters[objKey as keyof typeof filters])]; // set unique
                 }
                 this.filter.filterCards();
                 this.setCardButtons(); // set cards button listeners
             };
         });
-
-        resetAllFiltersBtn.onclick = () => {
+        const clearFilters = () => {
             // clear all filters
             const keys = Object.keys(filters);
             keys.forEach((item) => {
@@ -118,6 +128,22 @@ export default class Control {
             this.filter.filterCards(resetFilters);
 
             this.setCardButtons(); // set cards button listeners
+        };
+        resetAllFiltersBtn.onclick = () => {
+            clearFilters();
+
+            searchInput.value = ''; // clear input value
+        };
+
+        clearAllSettingsBtn.onclick = () => {
+            clearFilters();
+
+            // clear shopping cart
+            const shoppingCartQuantity = document.querySelector<HTMLElement>('.shopping-cart__items-amount');
+            if (!shoppingCartQuantity) return;
+            shoppingCartQuantity.textContent = '0';
+
+            searchInput.value = ''; // clear input value
         };
 
         sliderInStock.noUiSlider?.on('update', () => {
@@ -206,5 +232,27 @@ export default class Control {
                 });
             };
         });
+    }
+
+    activeButtonsLocalStorage() {
+        console.log(filters);
+        const keys = Object.keys(filters);
+        keys.forEach((item) => {
+            const filterArray = filters[item as keyof typeof filters];
+            filterArray.forEach((elem) => {
+                const button = document.getElementById(elem);
+                // set button active when filter is included
+                if (button) {
+                    if (button.classList.contains('button-color')) button.classList.add('color__item--active');
+                    else button.classList.add('filter-group__button--active');
+                }
+            });
+        });
+    }
+
+    setSortByContent() {
+        const optionBtn = document.querySelector<HTMLOptionElement>('.sort-by__select');
+        if (!optionBtn) return;
+        optionBtn.value = getSortByLocalStorage() || 'Name(A-Z)';
     }
 }

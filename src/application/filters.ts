@@ -1,6 +1,7 @@
+import { getFiltersLocalStorage } from './localStorage';
 import { Ifilter } from './type/type';
 
-export const filters: Ifilter = {
+export const filters: Ifilter = getFiltersLocalStorage() || {
     searchInput: [],
     manufacturer: [],
     colors: [],

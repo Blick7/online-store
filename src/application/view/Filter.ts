@@ -2,6 +2,7 @@ import { filters } from '../filters';
 import { Idata } from '../type/type';
 import { data } from '../data';
 import Cards from './Cards';
+import { getSortByLocalStorage, setLocatStorage } from '../localStorage';
 
 export default class Filter {
     private dataCopy: Idata[];
@@ -9,11 +10,17 @@ export default class Filter {
 
     constructor() {
         this.dataCopy = JSON.parse(JSON.stringify(data)); // copy object
-        this.sortBy = 'Name(A-Z)'; // set sorting by default
+        this.sortBy = getSortByLocalStorage() || 'Name(A-Z)'; // set sorting by default
+
+        console.log(this.sortBy);
     }
 
     changeSortBy(value: string) {
         this.sortBy = value;
+
+        // set sortBy localstorage
+        const storeSortBy = JSON.stringify(value);
+        localStorage.setItem('storeSortBy', storeSortBy);
     }
 
     filterCards(resetFilters?: boolean) {
@@ -36,6 +43,8 @@ export default class Filter {
         } else {
             cards.getCardsList(this.dataCopy);
         }
+
+        setLocatStorage();
     }
 
     filterSortBy() {
