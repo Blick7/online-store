@@ -40,7 +40,7 @@
         "build": "webpack --mode=production --config webpack.config.js",
         "lint": "eslint . --ext .ts",
         "clean": "rd /s /q dist",
-        "test": "jest --env=jsdom"
+        "test": "jest --env=jsdom --coverage"
     },
     "keywords": [],
     "author": "",
