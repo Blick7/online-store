@@ -39,8 +39,9 @@ export default class Control {
         searchInput.focus(); // set cursor when page is loaded
 
         // set input from localstorage as value
-        const storedInput = getFiltersLocalStorage();
-        searchInput.value = storedInput.searchInput.toString();
+        const storedInput = getFiltersLocalStorage() || [];
+        const store = storedInput.searchInput || [];
+        searchInput.value = store.toString();
 
         // add listener for select
         optionBtn.onchange = (event) => {
