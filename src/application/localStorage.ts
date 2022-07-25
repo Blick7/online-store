@@ -1,7 +1,6 @@
 import { filters } from './filters';
 
 export const setLocatStorage = () => {
-    // todo
     const storeFilters = JSON.stringify(filters);
     localStorage.setItem('filters', storeFilters);
 };
@@ -18,4 +17,11 @@ export const getSortByLocalStorage = () => {
     if (!string) return;
     const obj = JSON.parse(string);
     return obj;
+};
+
+export const getShoppingCartLocalStorage = () => {
+    const string = localStorage.getItem('storeShoppingCart');
+    if (!string) return;
+    const arrayOfItems = JSON.parse(string);
+    return arrayOfItems;
 };

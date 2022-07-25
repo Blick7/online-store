@@ -1,3 +1,4 @@
+import { getShoppingCartLocalStorage } from './localStorage';
 import { Idata } from './type/type';
 
-export const shoppingCart: Array<Idata> = [];
+export const shoppingCart: Array<Idata> = getShoppingCartLocalStorage() || [];
