@@ -1,5 +1,11 @@
 # Online Store
 
+Simple online store
+
+View [Deploy](https://blick7.github.io/online-store/index.html)
+
+[Reference](https://www.horizonhobby.com/)
+
 # Installation
 
 Clone this repo and npm install
@@ -15,6 +21,7 @@ npm i
 ```sh
 npm start
 ```
+
 Accessible at `localhost:8080`
 
 ## Production build
@@ -22,10 +29,3 @@ Accessible at `localhost:8080`
 ```sh
 npm run build
 ```
-
-# Features
-
-* Webpack
-* Sass
-* TypeScript
-* Eslint
